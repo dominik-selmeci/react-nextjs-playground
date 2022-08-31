@@ -1,0 +1,23 @@
+{
+  "bracketSpacing": true,
+  "printWidth": 80,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": [
+        ".babelrc",
+        ".commitlintrc",
+        ".eslintrc",
+        ".huskyrc",
+        ".lintstagedrc",
+        ".prettierrc",
+        ".stylelintrc"
+      ],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
