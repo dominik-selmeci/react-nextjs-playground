@@ -14,9 +14,12 @@ import { IconType } from 'react-icons'
 
 interface LinkItemProps {
   name: string
+  route: string
   icon?: IconType
 }
-const LINK_ITEMS: LinkItemProps[] = [{ name: 'React Hooks' }]
+const LINK_ITEMS: LinkItemProps[] = [
+  { name: 'Hooks: useState', route: '/hooks/use-state' },
+]
 
 interface SidebarProps extends BoxProps {
   onClose: () => void
@@ -25,11 +28,12 @@ interface SidebarProps extends BoxProps {
 interface NavItemProps extends FlexProps {
   icon?: IconType
   children: ReactNode
+  route: string
 }
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+const NavItem = ({ icon, children, route, ...rest }: NavItemProps) => {
   return (
     <Link
-      href="/hooks"
+      href={route}
       style={{ textDecoration: 'none' }}
       _focus={{ boxShadow: 'none' }}
     >
@@ -80,7 +84,9 @@ export function Sidebar({ onClose, ...rest }: SidebarProps) {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LINK_ITEMS.map((link) => (
-        <NavItem key={link.name}>{link.name}</NavItem>
+        <NavItem key={link.name} route={link.route}>
+          {link.name}
+        </NavItem>
       ))}
     </Box>
   )
