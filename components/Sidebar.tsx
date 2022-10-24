@@ -20,6 +20,7 @@ interface LinkItemProps {
 const LINK_ITEMS: LinkItemProps[] = [
   { name: 'Hooks: useState', route: '/hooks/use-state' },
   { name: 'Hooks: useEffect', route: '/hooks/use-effect' },
+  { name: 'Hooks: useContext', route: '/hooks/use-context' },
 ]
 
 interface SidebarProps extends BoxProps {
