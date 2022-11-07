@@ -24,6 +24,7 @@ const LINK_ITEMS: LinkItemProps[] = [
   { name: 'Hooks: custom hook', route: '/hooks/custom-hook' },
   { name: 'Hooks: useRef', route: '/hooks/use-ref' },
   { name: 'Hooks: useReducer', route: '/hooks/use-reducer' },
+  { name: 'VanillaJS: Closure', route: '/vanilla-js/closure' },
 ]
 
 interface SidebarProps extends BoxProps {
